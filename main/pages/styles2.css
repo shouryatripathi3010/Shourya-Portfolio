@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+
+  .navlist li{
+    list-style: none;
+  }
+
+  .navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #000;
+    position: relative;
+  }
+  .navlist li a::after, .navlist .active::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .1rem;
+  background: #000;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .5s;
+}
+
+.navlist li a:hover::after, .navlist .active::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.my{
+    border: none;
+    padding-top: 100px;
+}
+
+.hero{
+    background-color: #f8f8f8;
+    overflow: hidden;
+    position: fixed;
+}
+
+.heading h1{
+    color: #ff6347;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+
+.hero-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+
+.hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.hero-content button{
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    transition: .3s ease;
+}
+
+.hero-content button:hover{
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+.hero-image{
+    flex: 1;
+    height: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
