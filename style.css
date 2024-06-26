@@ -129,7 +129,7 @@ button:nth-child(1):hover{
 }
 
 .circle:nth-child(2){
-  background: url("./pictures/ib.jpg");
+  background: url("./ib.jpg");
   width: 30rem;
   background-size: cover;
   background-repeat: no-repeat;
